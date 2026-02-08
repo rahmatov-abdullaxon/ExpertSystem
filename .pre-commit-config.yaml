@@ -1,0 +1,22 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+        name: Black (code formatter)
+        language_version: python3.14
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.4.10
+    hooks:
+      - id: ruff
+        name: Ruff (linter & auto-fixer)
+        language_version: python3.14
+        args: ["--fix"]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
